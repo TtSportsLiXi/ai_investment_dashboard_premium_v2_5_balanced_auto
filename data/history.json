@@ -1,0 +1,197 @@
+[
+  {
+    "date": "2026-10-02",
+    "data_date": "2026-10-02",
+    "companies": [
+      {
+        "ticker": "ORCL",
+        "price": 142.3,
+        "fair_low": 145,
+        "fair_high": 180,
+        "entry": 150,
+        "attractive": 125,
+        "status": "可布局"
+      },
+      {
+        "ticker": "NVDA",
+        "price": 233.95,
+        "fair_low": 225,
+        "fair_high": 280,
+        "entry": 235,
+        "attractive": 205,
+        "status": "可布局"
+      },
+      {
+        "ticker": "MU",
+        "price": 1074.89,
+        "fair_low": 950,
+        "fair_high": 1250,
+        "entry": 1000,
+        "attractive": 850,
+        "status": "接近買點"
+      },
+      {
+        "ticker": "AVGO",
+        "price": 355.14,
+        "fair_low": 345,
+        "fair_high": 400,
+        "entry": 345,
+        "attractive": 300,
+        "status": "接近買點"
+      },
+      {
+        "ticker": "TSM",
+        "price": 472.78,
+        "fair_low": 460,
+        "fair_high": 525,
+        "entry": 450,
+        "attractive": 410,
+        "status": "合理"
+      },
+      {
+        "ticker": "SNPS",
+        "price": 489.9,
+        "fair_low": 475,
+        "fair_high": 545,
+        "entry": 470,
+        "attractive": 420,
+        "status": "合理"
+      },
+      {
+        "ticker": "MSFT",
+        "price": 517.53,
+        "fair_low": 495,
+        "fair_high": 575,
+        "entry": 500,
+        "attractive": 455,
+        "status": "合理"
+      },
+      {
+        "ticker": "META",
+        "price": 728.08,
+        "fair_low": 675,
+        "fair_high": 770,
+        "entry": 680,
+        "attractive": 610,
+        "status": "合理"
+      },
+      {
+        "ticker": "AMZN",
+        "price": 251.52,
+        "fair_low": 225,
+        "fair_high": 270,
+        "entry": 230,
+        "attractive": 205,
+        "status": "合理偏上"
+      },
+      {
+        "ticker": "GOOGL",
+        "price": 343.5,
+        "fair_low": 305,
+        "fair_high": 360,
+        "entry": 320,
+        "attractive": 285,
+        "status": "合理偏上"
+      },
+      {
+        "ticker": "VRT",
+        "price": 252.18,
+        "fair_low": 220,
+        "fair_high": 260,
+        "entry": 225,
+        "attractive": 195,
+        "status": "合理偏上"
+      },
+      {
+        "ticker": "ANET",
+        "price": 207.35,
+        "fair_low": 165,
+        "fair_high": 195,
+        "entry": 180,
+        "attractive": 155,
+        "status": "偏貴"
+      },
+      {
+        "ticker": "CDNS",
+        "price": 351.35,
+        "fair_low": 300,
+        "fair_high": 345,
+        "entry": 320,
+        "attractive": 285,
+        "status": "稍高"
+      },
+      {
+        "ticker": "KLAC",
+        "price": 206.89,
+        "fair_low": 165,
+        "fair_high": 190,
+        "entry": 180,
+        "attractive": 160,
+        "status": "偏高"
+      },
+      {
+        "ticker": "AMAT",
+        "price": 540.04,
+        "fair_low": 440,
+        "fair_high": 510,
+        "entry": 470,
+        "attractive": 420,
+        "status": "稍貴"
+      },
+      {
+        "ticker": "LRCX",
+        "price": 347.49,
+        "fair_low": 265,
+        "fair_high": 305,
+        "entry": 290,
+        "attractive": 260,
+        "status": "偏貴"
+      },
+      {
+        "ticker": "MRVL",
+        "price": 272.29,
+        "fair_low": 205,
+        "fair_high": 245,
+        "entry": 230,
+        "attractive": 200,
+        "status": "偏貴"
+      },
+      {
+        "ticker": "ALAB",
+        "price": 350.33,
+        "fair_low": 250,
+        "fair_high": 310,
+        "entry": 285,
+        "attractive": 240,
+        "status": "昂貴"
+      },
+      {
+        "ticker": "AMD",
+        "price": 633.91,
+        "fair_low": 390,
+        "fair_high": 465,
+        "entry": 440,
+        "attractive": 380,
+        "status": "明顯偏貴"
+      },
+      {
+        "ticker": "SNDK",
+        "price": 1719.99,
+        "fair_low": 1300,
+        "fair_high": 1550,
+        "entry": 1350,
+        "attractive": 1150,
+        "status": "偏貴"
+      },
+      {
+        "ticker": "ASX",
+        "price": 47.45,
+        "fair_low": 34,
+        "fair_high": 40,
+        "entry": 35,
+        "attractive": 30,
+        "status": "價格跑太快"
+      }
+    ]
+  }
+]

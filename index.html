@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="color-scheme" content="dark"/>
+<title>AI Capital Intelligence</title>
+<link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<div id="scrollProgress"></div>
+<canvas id="particleCanvas" aria-hidden="true"></canvas>
+<div class="ambient" aria-hidden="true"><i class="orb orb-a"></i><i class="orb orb-b"></i><i class="orb orb-c"></i><div class="grid-floor"></div></div>
+<div class="app-shell">
+  <nav class="nav glass">
+    <a class="brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span><b>ACi</b><small>AI CAPITAL INTELLIGENCE</small></span></a>
+    <div class="nav-links"><a href="#brief">Market</a><a href="#radar">Radar</a><a href="#ecosystem">Ecosystem</a><a href="#watchlist">Watchlist</a></div>
+    <div class="nav-right"><span class="system-dot"><i></i> DATA ONLINE</span><span id="navClock">--:--</span></div>
+  </nav>
+
+  <main id="top">
+    <section class="hero reveal">
+      <div class="hero-copy">
+        <div class="kicker"><span></span> PERSONAL LONG-TERM VALUE SYSTEM</div>
+        <h1>看價格之前，<br><em>先看價值。</em></h1>
+        <p class="hero-lead">AI / Semiconductor / Cloud / EDA / Data Center 的個人長線資本配置儀表板。以正常化獲利、自由現金流與安全邊際，找出真正值得等待的價格。</p>
+        <div class="hero-meta"><span class="chip">Asia/Taipei · 08:00 Update</span><span id="mode" class="chip chip-accent">AUTO RESEARCH</span><span id="updated" class="chip">資料載入中</span></div>
+      </div>
+      <div class="capital-console glass tilt-card spotlight-card">
+        <div class="console-head"><span>DEPLOYABLE CAPITAL</span><span class="live-pulse">LIVE</span></div>
+        <div class="capital-number"><span>$</span><strong id="cash">—</strong></div><div class="capital-caption" id="shvDetail">SHV reserve</div>
+        <div class="capital-ring-wrap"><svg class="capital-ring" viewBox="0 0 120 120"><circle cx="60" cy="60" r="49" class="ring-bg"/><circle cx="60" cy="60" r="49" class="ring-value" id="capitalRing"/></svg><div class="ring-label"><b id="nearCount">—</b><span>NEAR BUY ZONE</span></div></div>
+        <div class="console-footer"><span>WATCHLIST</span><b id="watchCount">—</b><span>STRATEGY</span><b>NO FOMO</b></div>
+      </div>
+    </section>
+
+    <section class="market-strip reveal" id="brief">
+      <div class="section-title-block"><div><span class="section-index">01</span><div><small>MARKET PULSE</small><h2>市場環境</h2></div></div><p>上一完整交易日與最新總經訊號</p></div>
+      <div id="marketCards" class="market-grid"></div>
+    </section>
+
+    <section class="brief-panel glass reveal">
+      <div class="brief-side"><div class="kicker"><span></span> DAILY INTELLIGENCE</div><h2>昨晚美股<br>為什麼漲跌？</h2><div class="brief-signal"><span>LONG-TERM LENS</span><b>Price ≠ Value</b></div></div>
+      <div class="brief-main"><p id="marketSummary" class="brief-text"></p><div id="marketDrivers" class="driver-cloud"></div><div class="brief-columns"><div class="brief-item"><span>FED / RATES</span><p id="fed"></p></div><div class="brief-item"><span>RESEARCH SOURCES</span><div id="marketSources" class="source-links"></div></div></div></div>
+    </section>
+
+    <section id="radar" class="radar-section reveal">
+      <div class="section-title-block"><div><span class="section-index">02</span><div><small>DEPLOYMENT RADAR</small><h2>最接近第一買點</h2></div></div><p>點擊卡片可展開個股估值詳情</p></div>
+      <div id="radarCards" class="radar-grid"></div>
+    </section>
+
+    <section id="ecosystem" class="reveal">
+      <div class="section-title-block"><div><span class="section-index">03</span><div><small>AI VALUE CHAIN</small><h2>AI 產業鏈與資本部署</h2></div></div><p>從應用、算力到設備與基礎設施，一眼看曝險集中度</p></div>
+      <div class="ecosystem-layout">
+        <article class="ecosystem-card glass"><div class="subhead"><span>VALUE CHAIN MAP</span><b>點節點篩選 Watchlist</b></div><div id="industryChain" class="industry-chain"></div></article>
+        <article class="deploy-card glass spotlight-card"><div class="subhead"><span>SHV DEPLOYMENT SIMULATOR</span><b>分批而不是一次梭哈</b></div><div class="deploy-controls"><label>目標標的<select id="deployTicker"></select></label><label>本批部署比例 <span id="deployPctLabel">20%</span><input id="deployPct" type="range" min="5" max="100" step="5" value="20"/></label></div><div class="deploy-output"><div><span>本批投入</span><b id="deployAmount">—</b></div><div><span>約可買</span><b id="deployShares">—</b></div><div><span>剩餘彈藥</span><b id="deployRemain">—</b></div></div><div class="deploy-hint" id="deployHint"></div></article>
+      </div>
+    </section>
+
+    <section class="intel-grid reveal">
+      <article class="intel-card glass"><header><span class="intel-icon">↗</span><div><small>VALUATION DELTA</small><h3>合理價變化</h3></div></header><div id="fairChanges" class="event-list"></div></article>
+      <article class="intel-card glass"><header><span class="intel-icon alert">!</span><div><small>THESIS MONITOR</small><h3>真正需要在意的變化</h3></div></header><div id="thesisChanges" class="event-list"></div></article>
+    </section>
+
+    <section id="watchlist" class="watch-section reveal">
+      <div class="section-title-block"><div><span class="section-index">04</span><div><small>FULL WATCHLIST</small><h2>AI / 半導體長線合理布局表</h2></div></div><p>合理價不是目標價，是願意承擔風險的價格區間</p></div>
+      <div class="toolbar glass"><label class="search-box"><span>⌕</span><input id="search" placeholder="搜尋 ticker / 公司 / 業務 / 關鍵字"/></label><select id="sector"><option value="">全部產業</option></select><select id="sort"><option value="distance">距布局價最近</option><option value="ticker">Ticker</option><option value="upside">合理價上行空間</option></select></div>
+      <div class="status-strip-wrap glass"><div class="status-strip-label">VALUATION</div><div id="statusChips" class="status-chips" role="tablist"></div></div>
+      <div class="table-frame glass"><div class="table-headline"><span>VALUATION MATRIX</span><small>Click row → Deep Dive</small></div><div class="table-wrap"><table><thead><tr><th>公司</th><th>產業</th><th>主要在做什麼</th><th>為什麼有吸引力</th><th>最新價</th><th>合理價值</th><th>開始布局</th><th>很有吸引力</th><th>買點距離</th><th>狀態</th><th>估值推導</th><th>Thesis-break</th></tr></thead><tbody id="tbody"></tbody></table></div></div>
+    </section>
+
+    <footer class="footer glass reveal"><div><b>AI CAPITAL INTELLIGENCE</b><p>Long-term value research dashboard · Personal use only.</p></div><div class="footer-rule">價格每天變，價值只在基本面改變時重估。</div><small>本網站為個人研究工具，不構成投資建議。</small></footer>
+  </main>
+</div>
+
+<div id="stockDrawerBackdrop" class="drawer-backdrop"></div>
+<aside id="stockDrawer" class="stock-drawer" aria-hidden="true">
+  <button id="drawerClose" class="drawer-close" aria-label="關閉">×</button>
+  <div class="drawer-scroll">
+    <div class="drawer-hero"><div><span id="drawerSector" class="tag"></span><h2><span id="drawerTicker"></span> <small id="drawerName"></small></h2><p id="drawerWhat"></p></div><div class="drawer-price"><span>最新價</span><b id="drawerPrice">—</b><i id="drawerStatus" class="status"></i></div></div>
+    <div class="drawer-metrics"><div><span>合理價值</span><b id="drawerFair">—</b></div><div><span>開始布局</span><b id="drawerEntry">—</b></div><div><span>很有吸引力</span><b id="drawerAttractive">—</b></div><div><span>距第一買點</span><b id="drawerDistance">—</b></div></div>
+    <section class="drawer-section"><div class="subhead"><span>VALUATION LADDER</span><b>Price vs Value</b></div><div id="valuationLadder" class="valuation-ladder"></div></section>
+    <section class="drawer-section"><div class="subhead"><span>HISTORY</span><b>股價 vs 合理價中值</b></div><div class="chart-box"><svg id="historyChart" viewBox="0 0 720 260" preserveAspectRatio="none"></svg><div id="historyEmpty" class="chart-empty"></div></div></section>
+    <section class="drawer-two"><div class="drawer-note"><span>WHY ATTRACTIVE</span><p id="drawerWhy"></p></div><div class="drawer-note danger"><span>THESIS-BREAK</span><p id="drawerRisk"></p></div></section>
+    <section class="drawer-section"><div class="subhead"><span>VALUATION LOGIC</span><b>怎麼推出來</b></div><p id="drawerMethod" class="drawer-method"></p><div id="drawerAnchors" class="anchor-grid"></div></section>
+  </div>
+</aside>
+<div id="toast" class="toast"></div>
+<script src="assets/app.js"></script>
+</body>
+</html>
