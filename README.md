@@ -1,32 +1,35 @@
-# AI Capital Intelligence — Premium v2
+# AI Capital Intelligence — Premium v2.5 FREE
 
-個人用 AI / Semiconductor / Cloud / EDA / Data Center 長線價值投資 Dashboard。
+Premium v2.4 的視覺與互動保留，資料架構改成 **免費自動行情 + 手動 AI 研究**。
 
-## Premium v2 新增
-- 單排估值狀態膠囊列（永不換行，窄螢幕可橫向滑動）
-- 點擊股票卡片 / 表格列展開 Deep Dive 動畫抽屜
-- 股價 vs 合理價中值歷史曲線（每日自動累積）
-- AI 產業鏈視覺圖，可點節點篩選 Watchlist
-- SHV 分批部署模擬器
-- Valuation Ladder：很有吸引力 / 開始布局 / 合理價 / 現價同圖比較
-- 原有每日 08:00 Asia/Taipei 自動研究與 GitHub Pages 部署保留
+## 這個版本不會呼叫 OpenAI API
 
-第一次設定請看 `SETUP_GUIDE.md`。
+`daily-update.yml` 沒有 `OPENAI_API_KEY`、沒有 OpenAI SDK、沒有 Responses API、沒有 web_search。
 
+因此網站每天自行運作時，不會產生 OpenAI API 使用費。
 
-## Premium v2.1 — Readability Upgrade
-- 全站字體放大，版面結構不變
-- 估值狀態膠囊固定單排，不換行；窄螢幕左右滑動
+## 每日免費自動更新
+- Watchlist 股價
+- S&P 500 / Nasdaq / Dow / SOX
+- 10Y / DXY / WTI / VIX
+- SHV 參考價格
+- 買點距離與估值狀態
+- 股價 vs 合理價歷史資料
 
+資料來源由 `yfinance` 取得，屬非官方 Yahoo Finance wrapper，適合個人研究，不是交易所級即時行情。
 
-## Premium v2.2 XL Readability
-- 全站文字再放大約 15–25%
-- 表格、卡片、Deep Dive、狀態標籤全面提升可讀性
-- 保持原本區塊排列、卡片結構、互動與單排狀態列
+## AI 研究
+AI 晨報、Fed 解讀、合理價調整、Thesis Change 都放在：
 
+`data/research.json`
 
-## Premium v2.4 Balanced Readability
-- 大標題 / 大股價 / Deep Dive 大標題維持原本尺寸
-- 僅放大表格正文、說明文字、狀態標籤、來源、估值推導與風險等小字
-- 狀態列維持單排不換行
-- 版面、區塊順序、卡片結構與動畫不變
+請參考 `MANUAL_AI_SYNC.md`。
+
+## 成本
+- OpenAI API：**$0（本專案完全不呼叫）**
+- GitHub Pages：公開 repository 一般可免費使用
+- GitHub Actions：公開 repository 的標準 hosted runner 一般可免費使用；若改成 private repository，請依 GitHub 帳戶方案注意 Actions minutes / storage 額度
+
+## 安全
+這個版本不需要 GitHub Secret `OPENAI_API_KEY`。
+如果你不打算做其他 API 專案，可以從 GitHub Repository Secrets 移除該 Secret。
